@@ -5,8 +5,5 @@ class Product < ApplicationRecord
   }
 
 
-  after_destroy {
-    Keen.delete 'product' , self
-    UpdateAnalyticsJob.perform_later self
-  }
+
 end
