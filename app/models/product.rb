@@ -4,6 +4,4 @@ class Product < ApplicationRecord
     UpdateAnalyticsJob.perform_later self
   }
 
-
-
 end
